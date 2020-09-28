@@ -1,0 +1,36 @@
+<html lang="es-CO">
+    <head>
+        <title>Pokemon Web</title>
+        <LINK rel=StyleSheet href="css/head.css" type="text/css" media=screen>
+        <link  rel="icon"   href="imagenes/favicon.ico" type="image/png" />
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            $(document).ready(function(){
+            
+                $(window).scroll(function(){
+                    if( $(this).scrollTop() > 0 ){
+                        $('header').addClass('header2');
+                    } else {
+                        $('header').removeClass('header2');
+                    }
+                });
+            
+            });
+        </script>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    </head>
+    <body>
+<header>
+		<div class="wrapper">
+			<div class="logo"><img src="imagenes/poke.png" width="250px" height="100px"></div>
+			
+			<nav>
+				<a href="index.html">Inicio</a>
+				<a href="#">Pokemon</a>
+			</nav>
+		</div>
+	</header>
+        <footer></footer>
+    </body>
+</html>
