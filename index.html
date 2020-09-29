@@ -1,9 +1,25 @@
 <html lang="es-CO">
     <head>
         <title>Pokemon Web</title>
-        <LINK rel=StyleSheet href="css/head.css" type="text/css" media=screen>
-        <link  rel="icon"   href="imagenes/favicon.ico" type="image/png" />
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <!--Css header -->
+        <LINK rel=StyleSheet href="css/head.css" type="text/css" media=screen> 
+        <!-- Css index-->
+        <LINK rel=StyleSheet href="css/index.css" type="text/css" media=screen> 
+        <!--Css carrusel de fotos-->
+        <LINK rel=StyleSheet href="css/estilos.css" type="text/css" media=screen> 
+        <!--icono de la pagina-->
+        <link  rel="icon"   href="img/favicon.ico" type="image/png" />
+        <!--Js carrusel de fotos-->
+        <script src="js/carrusel.js"></script> 
+        
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+        <meta http-equiv="X-UA-Caompatible" content="ie=edge">
+               
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:500,600&display=swap" rel="stylesheet">
+        
+        <!--JS Header dinamico-->
         <script>
             $(document).ready(function(){
             
@@ -17,20 +33,104 @@
             
             });
         </script>
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
+       
     </head>
-    <body>
-<header>
+<body>
+<div id="header">
 		<div class="wrapper">
-			<div class="logo"><img src="imagenes/poke.png" width="250px" height="100px"></div>
+			<div class="logo"><img src="img/poke.png" width="250px" height="100px"></div>
 			
 			<nav>
 				<a href="index.html">Inicio</a>
-				<a href="#">Pokemon</a>
+                <a href="">Pokemon</a>
+                <a href="">Tipos</a>
+                <a href="">Busqueda por nombre </a> <input type="text" name="nombre"/><br/>
 			</nav>
 		</div>
-	</header>
-        <footer></footer>
+    </div>
+    <header></header>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="texto" aling="justify">
+                    <p>Pokémon es un videojuego RPG (del inglés role-playing game, 
+                        traducido al español como “juegos de rol”) que fue lanzado por 
+                        primera vez en el año 1996 para la videoconsola Game Boy, 
+                        creado por el diseñador japonés Satoshi Tajiri para Nintendo.
+                    </p><p>
+                        El videojuego RPG Pokémon consiste en personificar el papel de 
+                        un entrenador de criaturas pokémon. Las criaturas pokémon son 
+                        monstruos que se encuentran en el mundo Pokémon (mezcla entre la 
+                        Tierra y una versión caricaturizada de ella) que deben ser capturadas 
+                        por los entrenadores para potenciar sus poderes y características
+                     </p>
+                </div>              
+                <div class="carousel center-align">
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"><p></p></h2>                        
+                        <p class="nombre">Pikachu</p>
+                        <img src="img/pika.png"  alt="">
+                    </div>
+
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"><p></p>></h2>                        
+                        <p class="nombre">Carmander</p>          
+                        <img src="./img/char.png" width="500" alt="">
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"><p></p>></h2>                        
+                        <p class="nombre">Squirtle </p>          
+                        <img src="./img/squirt.png" width="500" alt="">
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"><p></p>></h2>                       
+                        <p class="nombre">Butterfree </p>          
+                        <img src="./img/but.png" width="500" alt="">
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"><p></p></h2>
+                        <p class="nombre">Pidgey</p>          
+                        <img src="./img/pig.png" width="500" alt="">
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <h2 class="subtitulo"><p></p>> </h2>                        
+                        <p class="nombre">Clefairy </p>          
+                        <img src="./img/cle.png" width="500" alt="">
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+
+    <!-- Materialize.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- JS Main -->
+    <script src="js/main.js"></script>
+  
+        <div class="texto2">
+            <p>El objetivo del juego es convertirse en un maestro Pokémon capturando, 
+                entrenando y asistiendo a las evoluciones y megaevoluciones de cada 
+                criatura de las generaciones pokémones que existen para así completar 
+                el Pokédex (códice de los pokémones). Actualmente existen 721 pokemones diferentes
+            </p>
+            <p>Debido a su éxito inicial, Pokémon se ha convertido en:</p>
+            <ol id="lista2">
+                <li>Una saga de videojuegos que acompañaron los lanzamientos de cada nueva versión de las videocónsolas Nintendo.</li>
+                <li>En una serie animé lanzada en el año 1997 de 15 temporadas y 15 películas</li>
+                <li>En 38 tomos de manga con un total de 430 capítulos</li>
+                <li>En un juego de cartas coleccionables e intercambiables (trading cards game)</li>
+                <li>En productos de marketing y promoción.</li>
+            </ol>
+        </div>
+  
+        <footer>
+            <p>datos tomados de https://www.significados.com/pokemon/</p>
+            <img src="img/poli.png" width="50px" height="30px">
+        </footer>
     </body>
 </html>
