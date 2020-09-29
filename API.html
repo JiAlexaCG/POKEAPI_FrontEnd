@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body onload="GetAPI('dragonite')">
+
+    <label for="fname">Pokemon:</label>
+    <input type="text" id="pokemon" name="pokemon"><br><br>
+    <input type="button" value="Buscar pokemon" onclick="GetAPI(document.getElementById('pokemon').value)">
+    <div id="Content">
+
+
+    </div>
+
+    <script>
+
+        function GetAPI(pokemon) {
+            var xmlhttp = new XMLHttpRequest();
+            var url = "https://pokeapi.co/api/v2/pokemon/" + pokemon;
+
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myArr = JSON.parse(this.responseText);
+                    myFunction(myArr);
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+
+
+            function myFunction(arr) {
+                var out = "";
+                var i;
+                var name = arr["name"];
+                var sprite = arr["sprites"]["front_default"];
+                var moves = arr["moves"];
+
+                var htmlHeader = "<H4>" + name + "</H4>";
+
+                var htmlImg = "<img src = " + sprite + ">";
+
+                out += htmlHeader
+                out += htmlImg;
+
+                var moveslist = "<ul>";
+
+                for (i = 0; i < moves.length; i++) {
+                    var mo1 = moves[i].move;
+                    moveslist += "<li>" + moves[i].move.name + "</li>";
+                }
+
+                moveslist += "</ul>";
+                out += moveslist;
+
+                document.getElementById("Content").innerHTML = out;
+            }
+        }
+
+    </script>
+</body>
+</html>
