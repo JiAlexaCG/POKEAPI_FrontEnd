@@ -1,54 +1,49 @@
+<!DOCTYPE html>
 <html lang="es-CO">
     <head>
         <title>Pokemon Web</title>
         <!--Css header -->
         <LINK rel=StyleSheet href="css/head.css" type="text/css" media=screen> 
-        <!-- Css index-->
+        <!-- Css index y general -->
         <LINK rel=StyleSheet href="css/index.css" type="text/css" media=screen> 
+        <LINK rel=StyleSheet href="css/css_General.css" type="text/css" media=screen>
         <!--Css carrusel de fotos-->
         <LINK rel=StyleSheet href="css/estilos.css" type="text/css" media=screen> 
         <!--icono de la pagina-->
         <link  rel="icon"   href="img/favicon.ico" type="image/png" />
-        <!--Js carrusel de fotos-->
-        <script src="js/carrusel.js"></script> 
-        
+       
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
         <meta http-equiv="X-UA-Caompatible" content="ie=edge">
-               
+
+        <!--Librerias -->
+        <sript src="http://code.jquery.com/jquery-latest.js"></script>
+        <!--Js carrusel de fotos-->
+        <script src="js/main.js"></script> 
+
+      
+                            
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:500,600&display=swap" rel="stylesheet">
         
-        <!--JS Header dinamico-->
-        <script>
-            $(document).ready(function(){
-            
-                $(window).scroll(function(){
-                    if( $(this).scrollTop() > 0 ){
-                        $('header').addClass('header2');
-                    } else {
-                        $('header').removeClass('header2');
-                    }
-                });
-            
-            });
-        </script>
-       
+
     </head>
 <body>
-<div id="header">
+    <sript src="http://code.jquery.com/jquery-latest.js"></script>
+            <!--Js cmenu dinamico-->
+            <script src="js/head.js"></script>
+    <header class="header">
+
 		<div class="wrapper">
 			<div class="logo"><img src="img/poke.png" width="250px" height="100px"></div>
 			
 			<nav>
 				<a href="index.html">Inicio</a>
-                <a href="">Pokemon</a>
-                <a href="">Tipos</a>
-                <a href="">Busqueda por nombre </a> <input type="text" name="nombre"/><br/>
+                <a href="tipos.html">Tipos</a>
+                <a href="pojemongeneral.html">Pokemon</a> 
 			</nav>
 		</div>
-    </div>
-    <header></header>
+  
+    </header>
     <div class="container">
         <div class="row">
             <div class="col s12">
@@ -73,19 +68,19 @@
                     </div>
 
                     <div class="carousel-item">
-                        <h2 class="subtitulo"><p></p>></h2>                        
+                        <h2 class="subtitulo"><p></p></h2>                        
                         <p class="nombre">Carmander</p>          
                         <img src="./img/char.png" width="500" alt="">
                     </div>
                     
                     <div class="carousel-item">
-                        <h2 class="subtitulo"><p></p>></h2>                        
+                        <h2 class="subtitulo"><p></p></h2>                        
                         <p class="nombre">Squirtle </p>          
                         <img src="./img/squirt.png" width="500" alt="">
                     </div>
                     
                     <div class="carousel-item">
-                        <h2 class="subtitulo"><p></p>></h2>                       
+                        <h2 class="subtitulo"><p></p></h2>                       
                         <p class="nombre">Butterfree </p>          
                         <img src="./img/but.png" width="500" alt="">
                     </div>
@@ -97,7 +92,7 @@
                     </div>
                     
                     <div class="carousel-item">
-                        <h2 class="subtitulo"><p></p>> </h2>                        
+                        <h2 class="subtitulo"><p></p></h2>                        
                         <p class="nombre">Clefairy </p>          
                         <img src="./img/cle.png" width="500" alt="">
                     </div>

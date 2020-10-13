@@ -1,0 +1,88 @@
+
+/* ------------------- css contenido de los documentos --------- Estilos generales -------------------- */
+
+/* -------------------- footer*/
+footer{
+    width:100%; /* Establecemos que el header abarque el 100% del documento */
+	overflow:hidden; /* Eliminamos errores de float */
+	background:#3d69d1;
+	margin-bottom:20px;
+	height: 60px;
+	display: flex;
+    align-items: center;
+    margin-top: 25px;
+	-webkit-box-shadow: 0px 10px 33px -4px rgb(158, 147, 147);
+	-moz-box-shadow: 0px 10px 33px -4px rgb(129, 126, 115);
+	box-shadow: 0px 10px 33px -4px rgb(126, 123, 115);
+
+}
+footer p{
+    float: right;
+    font-size: 10px;
+    margin:10px;
+    display: block;
+}
+footer img{
+    float: right;
+    display: block;
+}
+
+/* ------------------- css contenido de los documentos ------------*/
+
+.container
+{margin:0 auto;max-width:1280px;width:90%}@media only screen and (min-width: 601px)
+{.container{width:85%}}@media only screen and (min-width: 993px){.container{width:70%}}
+
+
+#contenido{
+    min-height: 400px;
+    max-width:  1000px;
+    color: ivory;
+    
+}
+
+
+#contenido .titulo{
+
+    display: flex;
+    align-items: center;
+    font-family: Helvetica;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 15px;   
+    width: 1000px;
+    height: 40px;
+    color: rgb(16, 16, 211);
+    background-color: rgba(193, 192, 235, 0.6);
+    align-items: center;
+    vertical-align: middle;
+
+}
+
+.titulo select {
+    min-width:50px  ;
+    
+}
+
+.tabla{
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+text-align: right;
+width: 600px;
+align-items: center;
+}
+
+.tabla th {
+    padding: 5px;
+    font-size: 16px;
+    background-color: #83aec0;
+    color: #FFFFFF;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-right-color: #558FA6;
+    border-bottom-color: #558FA6;
+    font-family: “Trebuchet MS”, Arial;
+    text-transform: uppercase;
+}

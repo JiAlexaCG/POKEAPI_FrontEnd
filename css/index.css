@@ -1,4 +1,4 @@
-
+/*----------------------  css header y body index -----------*/
  .texto2{
     background-color: rgb(83, 147, 243);
     float: center;
@@ -16,6 +16,28 @@
     font-family: monospace;
     font-size: 15px;
 
+}
+.submenu{
+    position: absolute;
+    background: 333333;
+    width: 130%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+
+}
+
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-family:'Open sans';
+    text-decoration: none;
+}
+
+nav a:hover .submenu{
+    visibility: visible;
+    opacity: 1;
 }
 
 /*-----------Listas ------------------------https://blog.endeos.com/lleva-las-listas-html-al-siguiente-nivel-con-css/*/
@@ -72,31 +94,4 @@
     font-weight: bold;
     border-radius: 2em;
     transition: all .3s ease-out;
-}
-
-/* -------------------- footer*/
-
-footer{
-    width:100%; /* Establecemos que el header abarque el 100% del documento */
-	overflow:hidden; /* Eliminamos errores de float */
-	background:#3d69d1;
-	margin-bottom:20px;
-	height: 40px;
-	display: flex;
-    align-items: center;
-    margin-top: 25px;
-	-webkit-box-shadow: 0px 10px 33px -4px rgb(158, 147, 147);
-	-moz-box-shadow: 0px 10px 33px -4px rgb(129, 126, 115);
-	box-shadow: 0px 10px 33px -4px rgb(126, 123, 115);
-
-}
-footer p{
-    float: right;
-    font-size: 10px;
-    margin:10px;
-    display: block;
-}
-footer img{
-    float: right;
-    display: block;
 }

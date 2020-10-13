@@ -1,12 +1,14 @@
 /*http://www.falconmasters.com/jquery/header-dinamico-html-css-javascript/ */
-#header {
+header {
 	width:100%; /* Establecemos que el header abarque el 100% del documento */
 	overflow:hidden; /* Eliminamos errores de float */
 	background:#3d69d1;
 	margin-bottom:20px;
 	height: 110px;
+	/*
 	display: flex;
 	align-items: center;
+	*/
 	-webkit-box-shadow: 0px 10px 33px -4px rgb(158, 147, 147);
 	-moz-box-shadow: 0px 10px 33px -4px rgb(129, 126, 115);
 	box-shadow: 0px 10px 33px -4px rgb(126, 123, 115);
@@ -20,7 +22,7 @@
 	overflow:hidden; /* Eliminamos errores de float */
 }
  
-#header .logo {
+header .logo {
 	color:#f2f2f2;
 	font-size:50px;
 	line-height:200px;
@@ -29,13 +31,13 @@
     height: 100px;
 }
  
-#header nav {
+.header nav {
 	float:right;
 	line-height:100px;
-	vertical-align: middle
+/*	vertical-align: middle */
 }
  
-#header nav a {
+header nav a {
 	display:inline-block;
 	color:#fff;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -49,10 +51,12 @@
 	transition:all 500ms ease;
 }
  
-#header nav a:hover {
+header nav a:hover {
 	background:#FDC00D;
     border-radius:70px;
 }
+
+/* DINAMICO */
 
 .header2 {
 	position: fixed;
@@ -69,8 +73,8 @@
 }
 
 @media screen and (max-width: 950px) {
-	header .logo,
-	header nav {
+	#header .logo,
+	#header nav {
 		width:100%;
 		text-align:center; /*Centramos el menu y el logotipo*/
 		line-height:100px;
