@@ -26,7 +26,7 @@
         
 
     </head>
-<body>
+<body onload="GetAPI('rock')">
     <sript src="http://code.jquery.com/jquery-latest.js"></script>
             <!--Js cmenu dinamico-->
             <script src="js/head.js"></script>
@@ -45,11 +45,10 @@
     </header>
     <div class="container">
         <div id="contenido">            
-<<<<<<< HEAD
             <p class="titulo">SELECCIONAR TIPO &nbsp; &nbsp; 
                 
-                <select>
-                    <option>Seleccione un tipo</option>
+                <select id="TipoP"  name="Tipo">
+                    
                     <option>fighting</option>
                     <option>flying</option>
                     <option>poison</option>
@@ -59,24 +58,62 @@
                     <option>ghost</option>
                     <option>steel</option>
                     
-                </select></p>
-=======
-       <p class="titulo">SELECCIONAR TIPO &nbsp; &nbsp; <select name="Tipo">
-            <option value="1">AEREOS</option>
-            <option value="2">AGUA</option>
-            <option value="3">FUEGO</option>
-            <option value="4">TERRESTRE</option>
+                </select>
+                &nbsp; &nbsp;  <input type="button"  value="Buscar" onclick="GetAPI(document.getElementById('TipoP').value)">
+                <div id="Content">  
+            </p>
+
+            <div class="Tarjeta">
+                <script>
+                    
+                    function GetAPI(Tipo) {
+                        var xmlhttp = new XMLHttpRequest();
+                        var url = "https://pokeapi.co/api/v2/type/" + Tipo;
             
-</select>
->>>>>>> 033836895a3e9b2dbf5d95c4e15bf77d7b223d9c
-            <table class="tabla">
-                <tr>
-                    <TH>PPOKEMON</TH>
-                    <th>TIPO</th>
-                    <th>HABILIDAD</th>
-                    <TH>HABITAD</TH>
-                </tr>
-            </table>
+                        xmlhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                var myArr = JSON.parse(this.responseText);
+                                myFunction(myArr);
+                            }
+                        };
+                        xmlhttp.open("GET", url, true);
+                        xmlhttp.send();
+            
+            
+                        function myFunction(arr) {
+                            var out = "";
+                            var i;
+                            var name = arr["name"];                           
+                            var moves = arr["pokemon"];
+                            
+            
+                            var htmlHeader = "<H4> Tipo: " + name + "</H4>";
+            
+                            
+            
+                            out += htmlHeader
+                           
+                            var htmltext = "<H3>" + "Pokemons de este tipo" + "</H3>";
+                            out += htmltext
+                            var moveslist = "<ol"+" id="+"lista5"+">";
+            
+                            for (i = 0; i < moves.length; i++) {
+                                var mo1 = moves[i].move;
+                                moveslist += "<li>" + moves[i].pokemon.name + "</li>";
+                            }
+            
+                            moveslist += "</ol>";
+                            out += moveslist;
+            
+                            document.getElementById("Content").innerHTML = out;
+                        }
+                    }
+            
+                </script>
+    
+            
+        </div>
+                </div>
         </div>
     </div>
 

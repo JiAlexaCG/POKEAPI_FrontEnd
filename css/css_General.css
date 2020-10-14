@@ -52,15 +52,16 @@ footer img{
     font-size: 15px;   
     width: 1000px;
     height: 40px;
-    color: rgb(16, 16, 211);
-    background-color: rgba(193, 192, 235, 0.6);
+    color: rgb(1, 1, 2);
+    background-color: rgba(247, 247, 248, 0.6);
     align-items: center;
     vertical-align: middle;
 
 }
 
 .titulo select {
-    min-width:50px  ;
+    min-width:200px  ;
+    height: 30px;
     
 }
 
@@ -104,13 +105,8 @@ align-items: center;
     text-align: center;
     font-family: Garamond;
     font-size: 30px;
-    color: royalblue;
-    border-style: solid;
-    border-color: rgb(160, 168, 168);
-    border-left-width: 2px;
-    border-right-width:2px; 
-    border-top-width: 2px;
-    border-bottom-width: 2px;
+    color: rgb(1, 2, 3);
+
 
 }
 
@@ -119,7 +115,7 @@ align-items: center;
     display:block;
     margin:auto;
     border-style: solid;
-    border-color: rgb(160, 168, 168);
+    border-color: rgb(226, 230, 230);
     border-left-width: 2px;
     border-right-width:2px; 
     border-top-width: 2px;
@@ -132,3 +128,60 @@ align-items: center;
         -webkit-border-radius:50%;
         box-shadow: 0px 0px 5px 5px #888787;
         -webkit-box-shadow: 0px 0px 5px 5px #888787;}
+
+/*-------------------ñista--------*/
+#lista5 {
+    counter-reset: li; 
+    list-style: none; 
+    *list-style: decimal; 
+    font: 15px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+#lista5 ol {
+    margin: 0 0 0 2em; 
+}
+
+#lista5 {
+    list-style-type: none;
+    list-style-type: decimal !ie; /*IE 7- hack*/
+     
+    margin: 0;
+    margin-left: 1em;
+    padding: 0;
+     
+    counter-reset: li-counter;
+}
+
+#lista5 > li{
+    position: relative;
+    margin-bottom: 1.5em;
+    padding: 1.5em;
+    background-color: #eaeaea;
+}
+
+#lista5 > li:before {
+    position: absolute;
+    top: -0.3em;
+    left: -0.5em;
+    width: 1.8em;
+    height: 1.2em;
+     
+    font-size: 2em;
+    line-height: 1.2;
+    font-weight: bold;
+    text-align: center;
+    color: #464646;
+    background-color: #d0d0d0;
+     
+    transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    z-index: 99;
+    overflow: hidden;
+     
+    content: counter(li-counter);
+    counter-increment: li-counter;
+}
