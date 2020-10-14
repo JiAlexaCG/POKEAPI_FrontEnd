@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url(../imagenes/POKEMON/pokebola.jpg) no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  height: 100vh
+  
+}
+
+
+.form{
+    background: rgba(0, 0, 0, .9);
+    max-width: 600px;
+    width: 100%;
+    margin: 60px auto;
+    color: #fff;
+    padding: 10px 0px;
+}
+
+.form  P{
+
+    text-align: justify;
+    font-size: 20px;
+    position: relative;
+
+}
